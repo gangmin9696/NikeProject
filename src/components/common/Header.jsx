@@ -17,6 +17,7 @@ const Nav = styled.nav`
     display:flex; 
     li {
       position:relative; 
+      margin: 0 30px;
       &:hover {
         .depth2 { display:block }
       }
