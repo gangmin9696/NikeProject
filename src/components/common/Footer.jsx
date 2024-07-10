@@ -4,6 +4,23 @@ import styled from 'styled-components'
 
 
 const FooterBlock = styled.div`
+background:#454a56;
+  padding:50px 0; 
+  color:#fff;
+  .row {
+    .company_nav {
+      border-bottom:1px solid #fff; 
+      padding-bottom:30px; 
+      margin-bottom:30px; 
+      a {
+        margin-right:20px; 
+        &:hover, &:focus { color:yellow }
+      }
+    }
+    .company_info {
+      line-height:1.5em 
+    }
+  }
 `
 
 const Footer = () => {

@@ -21,7 +21,7 @@ const MainSlideBlock = styled.div`
     transform:translateX(-50%);
     li { display:inline-block; margin:0 10px;  
       button { width:40px; height:40px; 
-        background:red; border-radius:50%;
+        background:#000; border-radius:50%;
         text-indent:-9999px; overflow:hidden; 
       }
       &.slick-active {
@@ -31,7 +31,7 @@ const MainSlideBlock = styled.div`
   }
   .slick-arrow {
     position:absolute; top:50%; transform:translateY(-50%); 
-    font-size:50px; color:#f00; 
+    font-size:50px; color:#000; opacity: 0.5;
     &.slick-prev { left:50px;  z-index:9999 }
     &.slick-next { right:50px;  } 
   }
