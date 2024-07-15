@@ -35,9 +35,9 @@ const MainSlideBlock = styled.div`
             display: inline-block;
             margin: 0 10px;
             button {
-                width: 15px;
-                height: 15px;
-                background: #000000;
+                width: 20px;
+                height: 20px;
+                background: #000;
                 border-radius: 50%;
                 text-indent: -9999px;
                 overflow: hidden;
@@ -63,12 +63,6 @@ const MainSlideBlock = styled.div`
         }
         &.slick-next {
             right: 50px;
-        }
-    }
-
-    @media screen and (max-width: 1024px) {
-        .slick-arrow {
-            opacity: 0;
         }
     }
 `;

@@ -57,6 +57,44 @@ const Nav = styled.nav`
         }
     }
 `;
+// const Nav = styled.nav`
+//     .depth1 {
+//         display: flex;
+//         padding: 20px;
+//         justify-content: center;
+//         li {
+//             position: relative;
+//             margin: 0 50px;
+//             &:hover {
+//                 .depth2 {
+//                     display: block;
+//                 }
+//             }
+//             a {
+//                 padding: 40px 25px 40px 0;
+//                 &:hover,
+//                 &.active {
+//                     color: #f00;
+//                 }
+//             }
+//             .depth2 {
+//                 position: absolute;
+//                 top: 100%;
+//                 left: 0;
+//                 margin-left: -35px;
+//                 color: #000;
+//                 width: 150px;
+//                 border: 1px solid #023586;
+//                 display: none;
+//                 li {
+//                     a {
+//                         padding: 10px;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// `;
 const OtherNav = styled.div`
     a {
         padding-left: 25px;
@@ -98,6 +136,21 @@ const Header = () => {
                         </li>
                     </ul>
                 </Nav>
+
+                {/*         <OtherNav>
+          <NavLink to="/cart">장바구니</NavLink>
+          { !isUser ?
+            <>
+              <NavLink to="/login">로그인</NavLink>
+              <NavLink to="/join">회원가입</NavLink>
+            </>
+            :
+            <>
+              <a href="#none" onClick={ onLogout }>로그아웃</a>
+              <NavLink to="/join">정보수정({isUser.userName})</NavLink>
+            </>
+          }
+        </OtherNav> */}
             </div>
         </HeaderBlock>
     );

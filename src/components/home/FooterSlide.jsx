@@ -59,23 +59,15 @@ const MiniSlide = () => {
     };
     const sliders = [
         {
-            image1: "./assets/image/01.jpg",
+            image1: "./assets/image/shoes1.png",
             alt: "",
         },
         {
-            image1: "./assets/image/03.jpg",
+            image1: "./assets/image/shoes2.png",
             alt: "",
         },
         {
-            image1: "./assets/image/4.jpg",
-            alt: "",
-        },
-        {
-            image1: "./assets/image/5.jpg",
-            alt: "",
-        },
-        {
-            image1: "./assets/image/6.jpg",
+            image1: "./assets/image/shoes3.png",
             alt: "",
         },
         {
@@ -87,15 +79,15 @@ const MiniSlide = () => {
             alt: "",
         },
         {
-            image1: "./assets/image/4.jpg",
+            image1: "./assets/image/shoes1.png",
             alt: "",
         },
         {
-            image1: "./assets/image/5.jpg",
+            image1: "./assets/image/shoes2.png",
             alt: "",
         },
         {
-            image1: "./assets/image/6.jpg",
+            image1: "./assets/image/shoes3.png",
             alt: "",
         },
         {
@@ -104,18 +96,6 @@ const MiniSlide = () => {
         },
         {
             image1: "./assets/image/03.jpg",
-            alt: "",
-        },
-        {
-            image1: "./assets/image/4.jpg",
-            alt: "",
-        },
-        {
-            image1: "./assets/image/5.jpg",
-            alt: "",
-        },
-        {
-            image1: "./assets/image/6.jpg",
             alt: "",
         },
     ];
