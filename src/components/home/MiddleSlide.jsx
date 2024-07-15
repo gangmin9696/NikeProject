@@ -9,11 +9,11 @@ import {
 
 const MiddleSlideBlock = styled.div`
     position: relative;
-    padding: 30px 30px;
+    padding: 50px 30px;
     justify-content: center;
 
     img {
-        width: 100%;
+        width: 95%;
     }
 
     .slick-arrow {
@@ -84,12 +84,40 @@ const MiddleSlideBlock = styled.div`
         }
     }
 `;
+const SlideContainer = styled.div`
+    position: relative;
+`;
+
+const Image = styled.img`
+    width: 90%;
+    margin: 0 5%;
+    transition: all 0.5s;
+    opacity: ${({ ishovered }) => (ishovered ? 1 : 0)};
+`;
+const HoverImage = styled.img`
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    margin: 0 5%;
+    transition: all 0.5s;
+    opacity: ${({ ishovered }) => (ishovered ? 0 : 1)};
+`;
+
+const CustomPrevArrow = (props) => {
+    const { className, onClick } = props;
+    return <IoIosArrowDropleftCircle className={className} onClick={onClick} />;
+};
+
+const CustomNextArrow = (props) => {
+    const { className, onClick } = props;
+    return (
+        <IoIosArrowDroprightCircle className={className} onClick={onClick} />
+    );
+};
 
 const MiddleSlide = () => {
     const [currentImage, setCurrentImage] = useState(null);
-    const handleMouserOver = (아무렇게나써도되는매개변수내맘대로집어넣자) => {
-        setCurrentImage(아무렇게나써도되는매개변수내맘대로집어넣자);
-    };
     const sliders = [
         {
             image1: "./assets/image/mainimg.jpg",
@@ -113,27 +141,30 @@ const MiddleSlide = () => {
         },
     ];
     const options = {
-        dots: true,
+        dots: false,
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 3000,
         slidesToShow: 2,
-        slidexToScroll: 1,
-        arrows: false,
+        slidesToScroll: 1,
+        arrows: true,
+        prevArrow: <CustomPrevArrow />,
+        nextArrow: <CustomNextArrow />,
         responsive: [
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 2, //보여질 슬라이드 수
+                    slidesToShow: 2,
                 },
             },
             {
                 breakpoint: 767,
                 settings: {
-                    slidesToShow: 1, //보여질 슬라이드 수
+                    slidesToShow: 1,
                 },
             },
         ],
     };
+
     return (
         <MiddleSlideBlock className="row">
             <div className="name1">
@@ -144,18 +175,18 @@ const MiddleSlide = () => {
             </div>
             <Slider {...options}>
                 {sliders.map((item, index) => (
-                    <div key={index}>
-                        <img
-                            src={
-                                currentImage === index
-                                    ? item.image2
-                                    : item.image1
-                            }
-                            alt={item.alt}
-                            onMouseOver={() => handleMouserOver(index)}
-                            onMouseOut={() => setCurrentImage(null)}
+                    <SlideContainer key={index}>
+                        <Image
+                            src={item.image2}
+                            ishovered={currentImage == index ? "hover" : ""}
                         />
-                    </div>
+                        <HoverImage
+                            src={item.image1}
+                            onMouseOver={() => setCurrentImage(index)}
+                            onMouseOut={() => setCurrentImage(null)}
+                            ishovered={currentImage == index ? "hover" : ""}
+                        />
+                    </SlideContainer>
                 ))}
             </Slider>
         </MiddleSlideBlock>
